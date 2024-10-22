@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        @apply font-[Raleway];
+    }
+    li{
+        @apply px-4;
+        @apply cursor-pointer;
+    }
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg); 
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+.spin{
+    animation: spin 4s linear infinite;
+}
+
+@keyframes slideFade {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .text-blob {
+    animation: popIn 2s ease-out;
+  }
+  
+
+  
+.slideFade{
+    animation: slideFade 4s linear forwards;
+} 
+
